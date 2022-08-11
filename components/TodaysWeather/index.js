@@ -5,7 +5,6 @@ import getConfig from "next/config";
 const { publicRuntimeConfig } = getConfig();
 
 const TodaysWeather = ({ city, weather, timezone }) => {
-  //const sunrise =
   console.log(weather);
   return (
     <div className="today">
@@ -57,13 +56,9 @@ const TodaysWeather = ({ city, weather, timezone }) => {
                 alt={weather.weather[0].main}
                 layout="fill"
               />
-              {/*  */}
             </div>
           </div>
-          <h3>
-            {weather.weather[0].description}
-            {/*  */}
-          </h3>
+          <h3>{weather.weather[0].description}</h3>
         </div>
       </div>
     </div>

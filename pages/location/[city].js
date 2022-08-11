@@ -7,6 +7,7 @@ import TodaysWeather from "../../components/TodaysWeather";
 import HourlyWeather from "../../components/HourlyWeather/HourlyWeather";
 import Header from "../../components/header";
 import WeeklyWeather from "../../components/WeeklyWeather";
+import SearchBar from "../../components/topfold";
 const { publicRuntimeConfig } = getConfig();
 
 export async function getServerSideProps(context) {
@@ -78,7 +79,8 @@ export default function City({
       <Head>
         <title>{city.name} - Bizio Weather App</title>
       </Head>
-      <div>
+      <div className="my-3">
+        <SearchBar placeholder="Search for another city" />
         <TodaysWeather
           city={city}
           weather={dailyWeather[0]}

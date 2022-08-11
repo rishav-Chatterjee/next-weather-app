@@ -10,7 +10,7 @@ export default function Home() {
       <Header />
       <div className="home">
         <div className="container">
-          <SearchBar />
+          <SearchBar placeholder="Search your Country/City" />
           {/*  */}
         </div>
       </div>
